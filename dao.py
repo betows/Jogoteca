@@ -20,6 +20,8 @@ class JogoDao:
         else:
             cursor.execute(SQL_CRIA_JOGO, (jogo.nome, jogo.categoria, jogo.console))
             jogo.id = cursor.lastrowid
+        self.__db.connection.commit()
+        return jogo
 
     def listar(self):
         cursor = self.__db.connection.cursor()
