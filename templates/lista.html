@@ -17,7 +17,7 @@
                             <td>{{ jogo.categoria }}</td>
                             <td>{{ jogo.console }}</td>
                             <td><a href="{{ url_for('editar', id=jogo.id) }}">Editar</a> </td>
-                            <td><a href = "{{ url_for('deletar', id=jogo.id) }}">Deletar</a></td>
+                            <td><a href = "{{ url_for('deletar', id=jogo.id) }}">Deletar</a> </td>
                         </tr>
         {% endfor %}
         </tbody>
